@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+
+
+{% block title %}Titanic Survival Prediction{% endblock %}
+
+
+{% block content %}
+
+<div class="container my-5 mx-auto text-center bg-slate-900 text-white">
+    <form action="/titanic_prediction" method="POST" class="m-auto w-2/4 text-center">
+        <label for="Pclass" class="leading-7 text-sm text-white">Ticket Class</label>
+        <select name="ticket_class" id="Pclass" class="w-full bg-opacity-50 rounded border bg-slate-700 focus:border-indigo-500  focus:ring-2 focus:ring-indigo-200 text-base outline-none  text-center py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+            <option value="1" >Upper Class</option>
+            <option value="2" >Middle Class</option>
+            <option value="3" >Lower Class</option>
+        </select> 
+        <br>
+
+        <label for="Age" class="leading-7 text-sm text-white">Age</label>
+        <input type="number" min="0" id="Age" name="Age"
+            class="w-full bg-opacity-50 rounded border bg-slate-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none  text-center py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+            required> <br>
+
+        <label for="SibSp" class="leading-7 text-sm text-white">Number of Sibling/Spouse aboard</label>
+        <input type="number" min="0" id="SibSp" name="SibSp" value="Enter values either 0 or 1 only"
+            class="w-full  bg-opacity-50 rounded border bg-slate-700  focus:border-indigo-500  focus:ring-2 focus:ring-indigo-200 text-base outline-none  text-center py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+            required><br>
+
+        <label for="Parch" class="leading-7 text-sm text-white">Number of Parents/Children aboard</label>
+        <input type="number" min="0" id="Parch" name="Parch"
+            class="w-full  bg-opacity-50 rounded border bg-slate-700  focus:border-indigo-500  focus:ring-2 focus:ring-indigo-200 text-base outline-none  text-center py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+            required> <br>
+
+        <label for="Fare" class="leading-7 text-sm text-white">Passenger Fare</label>
+        <input type="number" id="Fare" name="Fare"
+            class="w-full  bg-opacity-50 rounded border bg-slate-700  focus:border-indigo-500  focus:ring-2 focus:ring-indigo-200 text-base outline-none  text-center py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+            required> <br>
+
+        <label for="Gender" class="leading-7 text-sm text-white">Gender</label>
+        <select name="gender" id="Gender" class="w-full bg-opacity-50 rounded border bg-slate-700 focus:border-indigo-500  focus:ring-2 focus:ring-indigo-200 text-base outline-none  text-center py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+            <option value="1">Male</option>
+            <option value="0">Female</option>
+        </select><br>
+
+        <button type="submit" class="flex mx-auto my-5 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Predict</button>
+    </form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,355 @@
+{% extends 'base.html' %}
+
+
+
+{% block title %}Nitesh Pandey{% endblock %}
+
+
+{% block content %}
+
+<section class="body-font bg-slate-900 text-white">
+    <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+        <div
+            class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+            <h1 class="title-font sm:text-4xl text-4xl mb-4 font-medium text-white">
+                I am Nitesh Pandey
+            </h1>
+            <p class="mb-8 leading-relaxed text-justify">5.6 years of industry experience with around 1.5 years of working experience in Machine Learning Engineer.
+                Expertise in predictive modelling, data processing and data mining to solve challenging business problem.
+                Passionate about working on large dataset and able to design high-value-added solution to business stakeholder.</p>
+        </div>
+        <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 flex items-center justify-center">
+            <div class="w-96 h-96 flex items-center justify-center rounded-2xl overflow-hidden">
+                <img class="object-cover object-center w-full h-full" alt=""
+                    src="{{ url_for('static', filename='images/nitesh.png') }}">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="body-font bg-slate-900 text-white" id="Demo">
+    <div class="container px-5 py-10 mx-auto">
+        <div class="flex flex-col text-center w-full mb-20">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font text-white text-white">Some Of Machine Learning
+                Demos.
+            </h1>
+        </div>
+        <div class="flex flex-wrap -m-4">
+            <div class="p-4 md:w-1/4">
+                <a class="text-white" href="/linear-regression">
+                    <div class="flex rounded-lg h-full  bg-slate-700 p-8 flex-col">
+                        <div class="flex items-center mb-3">
+                            <div
+                                class="w-10 h-10 mr-3 px-2 py-2 inline-flex items-center justify-center rounded-full bg-slate-800 text-white flex-shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                    <path fill="none" d="M0 0h24v24H0z" />
+                                    <path
+                                        d="M21 19h2v2H1v-2h2V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v15h2V9h3a1 1 0 0 1 1 1v9zM7 11v2h4v-2H7zm0-4v2h4V7H7z"
+                                        fill="rgba(255,255,255,1)" />
+                                </svg>
+                            </div>
+                            <h2 class="text-white text-white text-lg title-font font-medium">Boston House Price
+                                Prediction
+                            </h2>
+                        </div>
+                        <div class="flex-grow">
+                            <p class="leading-relaxed text-slate-400 text-base">Boston price prediction is a house
+                                prediction dateset
+                                where
+                                we have to predict the price based on some dependent variable. </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="p-4 md:w-1/4">
+                <a class="text-white" href="/admission-prediction">
+                    <div class="flex rounded-lg h-full  bg-slate-700 p-8 flex-col">
+                        <div class="flex items-center mb-3">
+                            <div
+                                class="w-10 h-10 mr-3 px-2 py-2 inline-flex items-center justify-center rounded-full bg-slate-800 text-white flex-shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                    <path fill="none" d="M0 0h24v24H0z" />
+                                    <path
+                                        d="M2 3.993A1 1 0 0 1 2.992 3h18.016c.548 0 .992.445.992.993v16.014a1 1 0 0 1-.992.993H2.992A.993.993 0 0 1 2 20.007V3.993zM4 5v2h2V5H4zm14 0v2h2V5h-2zM4 9v2h2V9H4zm14 0v2h2V9h-2zM4 13v2h2v-2H4zm14 0v2h2v-2h-2zM4 17v2h2v-2H4zm14 0v2h2v-2h-2z"
+                                        fill="rgba(255,255,255,1)" />
+                                </svg>
+                            </div>
+                            <h2 class="text-white text-white text-lg title-font font-medium">Admission Prediction
+                            </h2>
+                        </div>
+                        <div class="flex-grow">
+                            <p class="leading-relaxed text-slate-400 text-base">To apply for a master's degree is a very expensive and intensive work. With this models students will guess their capacities and they will decide whether to apply for a master's degree or not.
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="p-4 md:w-1/4">
+                <a class="text-white" href="/titanic-survival">
+                    <div class="flex rounded-lg h-full  bg-slate-700 p-8 flex-col">
+                        <div class="flex items-center mb-3">
+                            <div
+                                class="w-10 h-10 mr-3 px-2 py-2 inline-flex items-center justify-center rounded-full bg-slate-800 text-white flex-shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                    <path fill="none" d="M0 0h24v24H0z" />
+                                    <path
+                                        d="M9 4h5.446a1 1 0 0 1 .848.47L18.75 10h4.408a.5.5 0 0 1 .439.74l-3.937 7.217A4.992 4.992 0 0 1 15 16 4.992 4.992 0 0 1 11 18a4.992 4.992 0 0 1-4-2 4.992 4.992 0 0 1-4.55 1.97l-1.236-6.791A1 1 0 0 1 2.198 10H3V5a1 1 0 0 1 1-1h1V1h4v3zm-4 6h11.392l-2.5-4H5v4zM3 20a5.978 5.978 0 0 0 4-1.528A5.978 5.978 0 0 0 11 20a5.978 5.978 0 0 0 4-1.528A5.978 5.978 0 0 0 19 20h2v2h-2a7.963 7.963 0 0 1-4-1.07A7.963 7.963 0 0 1 11 22a7.963 7.963 0 0 1-4-1.07A7.963 7.963 0 0 1 3 22H1v-2h2z"
+                                        fill="rgba(255,255,255,1)" />
+                                </svg>
+                            </div>
+                            <h2 class="text-white text-white text-lg title-font font-medium">Titanic Prediction</h2>
+                        </div>
+                        <div class="flex-grow">
+                            <p class="leading-relaxed text-slate-400 text-base"> In particular,
+                                we apply the tools of machine learning to predict which passengers
+                                survived in the Titanic disaster</p>
+
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="p-4 md:w-1/4">
+                <a class="text-white" href="/diabetes-prediction">
+                    <div class="flex rounded-lg h-full  bg-slate-700 p-8 flex-col">
+                        <div class="flex items-center mb-3">
+                            <div
+                                class="w-10 h-10 mr-3 px-2 py-2 inline-flex items-center justify-center rounded-full bg-slate-800 text-white flex-shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                    <path fill="none" d="M0 0H24V24H0z" />
+                                    <path
+                                        d="M19.778 4.222c2.343 2.343 2.343 6.142 0 8.485l-2.122 2.12-4.949 4.951c-2.343 2.343-6.142 2.343-8.485 0-2.343-2.343-2.343-6.142 0-8.485l7.07-7.071c2.344-2.343 6.143-2.343 8.486 0zm-4.95 10.606L9.172 9.172l-3.536 3.535c-1.562 1.562-1.562 4.095 0 5.657 1.562 1.562 4.095 1.562 5.657 0l3.535-3.536z"
+                                        fill="rgba(255,255,255,1)" />
+                                </svg>
+                            </div>
+                            <h2 class="text-white text-white text-lg title-font font-medium">Diabetes Prediction</h2>
+                        </div>
+                        <div class="flex-grow">
+                            <p class="leading-relaxed text-slate-400 text-base">Diabetes is a common, chronic disease.
+                                Prediction of
+                                diabetes at an early stage can lead to improved treatment.
+                                Data mining techniques are widely used for prediction of disease at an early stage.
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="py-12 bg-slate-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="lg:text-center">
+            <p class="mt-2 text-sm leading-0 font-medium text-white text-white sm:text-4xl">
+                Area's Of Interest
+            </p>
+            <p class="mt-4 max-w-2xl text-sm text-white text-white lg:mx-auto">
+                Take a look of some of the things i love working on.
+            </p>
+        </div>
+
+        <div class="mt-10">
+            <dl class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
+                <div class="relative">
+                    <dt>
+                        <div
+                            class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-slate-800 text-white shadow-xl">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                <path fill="none" d="M0 0h24v24H0z" />
+                                <path
+                                    d="M6 18h12V6H6v12zm8 2h-4v2H8v-2H5a1 1 0 0 1-1-1v-3H2v-2h2v-4H2V8h2V5a1 1 0 0 1 1-1h3V2h2v2h4V2h2v2h3a1 1 0 0 1 1 1v3h2v2h-2v4h2v2h-2v3a1 1 0 0 1-1 1h-3v2h-2v-2zM8 8h8v8H8V8z"
+                                    fill="rgba(255,255,255,1)" />
+                            </svg>
+                        </div>
+                        <p class="ml-16 text-lg leading-6 font-medium text-white text-white">ML (Machine
+                            Learning)</p>
+                    </dt>
+                    <dd class="mt-2 ml-16 text-base text-slate-400">
+                        Machine learning (ML) is the study of computer algorithms that can improve automatically through
+                        experience and by the use of data.Machine learning algorithms are used in a wide variety of
+                        applications.
+                    </dd>
+                </div>
+
+                <div class="relative">
+                    <dt>
+                        <div
+                            class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-slate-800 text-white shadow-xl">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                <path fill="none" d="M0 0h24v24H0z" />
+                                <path
+                                    d="M7.105 15.21A3.001 3.001 0 1 1 5 15.17V8.83a3.001 3.001 0 1 1 2 0V12c.836-.628 1.874-1 3-1h4a3.001 3.001 0 0 0 2.895-2.21 3.001 3.001 0 1 1 2.032.064A5.001 5.001 0 0 1 14 13h-4a3.001 3.001 0 0 0-2.895 2.21zM6 17a1 1 0 1 0 0 2 1 1 0 0 0 0-2zM6 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm12 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"
+                                    fill="rgba(255,255,255,1)" />
+                            </svg>
+                        </div>
+                        <p class="ml-16 text-lg leading-6 font-medium text-white text-white">NLP (Natural
+                            Language Processing)</p>
+                    </dt>
+                    <dd class="mt-2 ml-16 text-base text-slate-400">
+                        Natural Language Processing (NLP) Natural language processing strives to build machines that
+                        understand and respond to text or voice data—and respond with text or speech of their own—in
+                        much the same way humans do.
+                    </dd>
+                </div>
+
+                <div class="relative">
+                    <dt>
+                        <div
+                            class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-slate-800 text-white shadow-xl">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                <path fill="none" d="M0 0h24v24H0z" />
+                                <path
+                                    d="M17 21H7A6 6 0 0 1 5.008 9.339a7 7 0 1 1 13.984 0A6 6 0 0 1 17 21zm0-12a5 5 0 1 0-9.994.243l.07 1.488-1.404.494A4.002 4.002 0 0 0 7 19h10a4 4 0 1 0-3.796-5.265l-1.898-.633A6.003 6.003 0 0 1 17 9z"
+                                    fill="rgba(255,255,255,1)" />
+                            </svg>
+                        </div>
+                        <p class="ml-16 text-lg leading-6 font-medium text-white">Cloud</p>
+                    </dt>
+                    <dd class="mt-2 ml-16 text-base text-slate-400">
+                        Cloud computing is the on-demand availability of computer system resources, especially data
+                        storage and computing power,without direct active management by the user.
+                    </dd>
+                </div>
+
+                <div class="relative">
+                    <dt>
+                        <div
+                            class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-slate-800 text-white shadow-xl">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                <path fill="none" d="M0 0h24v24H0z" />
+                                <path
+                                    d="M20.083 15.2l1.202.721a.5.5 0 0 1 0 .858l-8.77 5.262a1 1 0 0 1-1.03 0l-8.77-5.262a.5.5 0 0 1 0-.858l1.202-.721L12 20.05l8.083-4.85zm0-4.7l1.202.721a.5.5 0 0 1 0 .858L12 17.65l-9.285-5.571a.5.5 0 0 1 0-.858l1.202-.721L12 15.35l8.083-4.85zm-7.569-9.191l8.771 5.262a.5.5 0 0 1 0 .858L12 13 2.715 7.429a.5.5 0 0 1 0-.858l8.77-5.262a1 1 0 0 1 1.03 0zM12 3.332L5.887 7 12 10.668 18.113 7 12 3.332z"
+                                    fill="rgba(255,255,255,1)" />
+                            </svg>
+                        </div>
+                        <p class="ml-16 text-lg leading-6 font-medium text-white text-white">Parallel computing
+                        </p>
+                    </dt>
+                    <dd class="mt-2 ml-16 text-base text-slate-400">
+                        Parallel computing is a type of computation in which many calculations or processes are carried
+                        out simultaneously.Large problems can often be divided into smaller ones, which can then be
+                        solved at the same time.
+                    </dd>
+                </div>
+                <div class="relative">
+                    <dt>
+                        <div
+                            class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-slate-800 text-white shadow-xl">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                <path fill="none" d="M0 0h24v24H0z" />
+                                <path
+                                    d="M2.213 14.06a9.945 9.945 0 0 1 0-4.12c1.11.13 2.08-.237 2.396-1.001.317-.765-.108-1.71-.986-2.403a9.945 9.945 0 0 1 2.913-2.913c.692.877 1.638 1.303 2.403.986.765-.317 1.132-1.286 1.001-2.396a9.945 9.945 0 0 1 4.12 0c-.13 1.11.237 2.08 1.001 2.396.765.317 1.71-.108 2.403-.986a9.945 9.945 0 0 1 2.913 2.913c-.877.692-1.303 1.638-.986 2.403.317.765 1.286 1.132 2.396 1.001a9.945 9.945 0 0 1 0 4.12c-1.11-.13-2.08.237-2.396 1.001-.317.765.108 1.71.986 2.403a9.945 9.945 0 0 1-2.913 2.913c-.692-.877-1.638-1.303-2.403-.986-.765.317-1.132 1.286-1.001 2.396a9.945 9.945 0 0 1-4.12 0c.13-1.11-.237-2.08-1.001-2.396-.765-.317-1.71.108-2.403.986a9.945 9.945 0 0 1-2.913-2.913c.877-.692 1.303-1.638.986-2.403-.317-.765-1.286-1.132-2.396-1.001zM4 12.21c1.1.305 2.007 1.002 2.457 2.086.449 1.085.3 2.22-.262 3.212.096.102.195.201.297.297.993-.562 2.127-.71 3.212-.262 1.084.45 1.781 1.357 2.086 2.457.14.004.28.004.42 0 .305-1.1 1.002-2.007 2.086-2.457 1.085-.449 2.22-.3 3.212.262.102-.096.201-.195.297-.297-.562-.993-.71-2.127-.262-3.212.45-1.084 1.357-1.781 2.457-2.086.004-.14.004-.28 0-.42-1.1-.305-2.007-1.002-2.457-2.086-.449-1.085-.3-2.22.262-3.212a7.935 7.935 0 0 0-.297-.297c-.993.562-2.127.71-3.212.262C13.212 6.007 12.515 5.1 12.21 4a7.935 7.935 0 0 0-.42 0c-.305 1.1-1.002 2.007-2.086 2.457-1.085.449-2.22.3-3.212-.262-.102.096-.201.195-.297.297.562.993.71 2.127.262 3.212C6.007 10.788 5.1 11.485 4 11.79c-.004.14-.004.28 0 .42zM12 15a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0-2a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"
+                                    fill="rgba(255,255,255,1)" />
+                            </svg>
+                        </div>
+                        <p class="ml-16 text-lg leading-6 font-medium text-white text-white">Model Deplyoment
+                        </p>
+                    </dt>
+                    <dd class="mt-2 ml-16 text-base text-slate-400">
+                        deploying a model in a real world production environment.The model can be deployed across a
+                        range of different environments and will often be integrated with apps through an API
+                    </dd>
+                </div>
+                <div class="relative">
+                    <dt>
+                        <div
+                            class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-slate-800 text-white shadow-xl">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                <path fill="none" d="M0 0H24V24H0z" />
+                                <path
+                                    d="M5 3v16h16v2H3V3h2zm15.293 3.293l1.414 1.414L16 13.414l-3-2.999-4.293 4.292-1.414-1.414L13 7.586l3 2.999 4.293-4.292z"
+                                    fill="rgba(255,255,255,1)" />
+                            </svg>
+                        </div>
+                        <p class="ml-16 text-lg leading-6 font-medium text-white">Data Analytics</p>
+                    </dt>
+                    <dd class="mt-2 ml-16 text-base text-slate-400">
+                        Data analytics is the science of analyzing raw data to make conclusions about that information.
+                        Many of the techniques and processes of data analytics
+                        have been automated into mechanical processes and algorithms that work over raw data for human
+                        consumption
+                    </dd>
+                </div>
+            </dl>
+        </div>
+    </div>
+</div>
+
+<section class=" body-font relative bg-slate-900 text-white" id="Contact">
+    <div class="container px-5 py-10 mx-auto">
+        <div class="flex flex-col text-center w-full mb-12">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-white">Contact Us</h1>
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-base text-white"></p>
+        </div>
+        <div class="lg:w-1/2 md:w-2/3 mx-auto">
+            <div class="flex flex-wrap -m-2">
+                <form action="/success-mail" method="post" class="flex flex-wrap -m-2">
+                    <div class="p-2 w-1/2">
+                        <div class="relative">
+                            <label for="name" class="leading-7 text-sm  text-white">Name</label>
+                            <input type="text" id="name" name="name"
+                                class="w-full  bg-slate-700 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus: focus:ring-2 focus:ring-indigo-200 text-base outline-none  py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                        </div>
+                    </div>
+                    <div class="p-2 w-1/2">
+                        <div class="relative">
+                            <label for="email" class="leading-7 text-sm  text-white">Email</label>
+                            <input type="email" id="email" name="email"
+                                class="w-full  bg-slate-700 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus: focus:ring-2 focus:ring-indigo-200 text-base outline-none  py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                        </div>
+                    </div>
+                    <div class="p-2 w-full">
+                        <div class="relative">
+                            <label for="message" class="leading-7 text-sm  text-white">Message</label>
+                            <textarea id="message" name="message"
+                                class="w-full  bg-slate-700 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus: focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none  py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+                        </div>
+                    </div>
+                    <div class="p-2 w-full">
+                        <button
+                            class="flex mx-auto text-white bg-slate-800 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Send</button>
+                    </div>
+                </form>
+                <div class="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
+                    <a class="text-indigo-500"
+                        href="mailto:niteshpandeyofficial@gmail.com">niteshpandeyofficial@gmail.com</a>
+                    <p class="leading-normal my-5"></p>
+                    <span class="inline-flex">
+                        <a class="text-white">
+                            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                class="w-5 h-5" viewBox="0 0 24 24">
+                                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a class="ml-4 text-white">
+                            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                class="w-5 h-5" viewBox="0 0 24 24">
+                                <path
+                                    d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a class="ml-4 text-white">
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                            </svg>
+                        </a>
+                        <a class="ml-4 text-white">
+                            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                class="w-5 h-5" viewBox="0 0 24 24">
+                                <path
+                                    d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z">
+                                </path>
+                            </svg>
+                        </a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}

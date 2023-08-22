@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+
+
+{% block title %}Rating{% endblock %}
+
+
+{% block content %}
+
+<div class="container my-5 mx-auto text-center bg-slate-900 text-white">
+    <form action="/predict-rating" method="POST" class="m-auto w-2/4 text-center">
+        <label for="story" class="leading-7 text-sm text-white">Give your feedback about movie:</label>
+        <br>
+        <textarea id="story" name="Feedback" rows="5" cols="33" class="w-full bg-opacity-50 rounded border bg-slate-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-center py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"></textarea>
+        <br>
+        <button type="submit" class="flex mx-auto my-5 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Submit</button>
+    </form>
+</div>
+
+{% endblock %}
